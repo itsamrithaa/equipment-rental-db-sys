@@ -26,7 +26,7 @@ public class main {
                 break;
             case 2:
                 System.out.println("You selected Manage Warehouses");
-                System.out.println("This version does not support this option. We are sorry for inconveniances caused.");
+                System.out.println("This version does not support this option. We are sorry for inconveniences caused.");
                 break;
             case 3:
                 System.out.println("You selected Manage Drones");
@@ -34,11 +34,11 @@ public class main {
                 break;
             case 4:
                 System.out.println("You selected Manage Equipment");
-                System.out.println("This version does not support this option. We are sorry for inconveniances caused.");
+                System.out.println("This version does not support this option. We are sorry for inconveniences caused.");
                 break;
             case 5:
                 System.out.println("You selected Manage Purchase Orders");
-                System.out.println("This version does not support this option. We are sorry for inconveniances caused.");
+                System.out.println("This version does not support this option. We are sorry for inconveniences caused.");
                 break;
             case 6:
                 System.out.println("You selected Rentals");
@@ -50,11 +50,11 @@ public class main {
                 break;
             case 8:
                 System.out.println("You selected Ratings & Reviews");
-                System.out.println("This version does not support this option. We are sorry for inconveniances caused.");
+                System.out.println("This version does not support this option. We are sorry for inconveniences caused.");
                 break;
             case 9:
                 System.out.println("You selected Search");
-                System.out.println("This version does not support this option. We are sorry for inconveniances caused.");
+                System.out.println("This version does not support this option. We are sorry for inconveniences caused.");
                 break;
             case 10:
                 System.out.println("You selected Exit");
