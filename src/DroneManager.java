@@ -103,7 +103,7 @@ public class DroneManager {
         String serial = scanner.nextLine();
         for (Drone d : drones) {
             if (d.getSerialNum().equals(serial)) {
-                System.out.println(d);
+                System.out.println(d.toString());
                 return;
             }
         }

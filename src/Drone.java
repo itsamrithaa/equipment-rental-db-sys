@@ -33,4 +33,11 @@ public class Drone {
     public void setLocation(String location) { this.location = location; }
     public void setWarrantyExp(String warrantyExp) { this.warrantyExp = warrantyExp; }
     public void setWarehouseAddress(String warehouseAddress) { this.warehouseAddress = warehouseAddress; }
+
+    public String toString() {
+        return String.format(
+            "Drone Serial: %s | Name: %s | Model: %s | Status: %s | Location: %s | Warranty Exp: %s | Warehouse: %s",
+            serialNum, name, model, status, location, warrantyExp, warehouseAddress
+        );
+    }
 }
