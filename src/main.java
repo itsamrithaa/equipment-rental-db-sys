@@ -3,10 +3,13 @@ import java.lang.String;
 import java.lang.System;
 public class main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        DroneManager droneManager = new DroneManager();
+
         //This will act as the main menu for the database system
         System.out.println("Welcome to the Database System for Group 10");
         System.out.println("Please select a number option from the following menu:");
-        System.out.println("1. Manage Members");
+        System.out.println("1. Manage Customers");
         System.out.println("2. Manage Warehouses");
         System.out.println("3. Manage Drones");
         System.out.println("4. Manage Equipment");
@@ -17,9 +20,9 @@ public class main {
         System.out.println("9. Search"); //Is this necessary?
         System.out.println("10. Exit");
         System.out.println("Please enter your choice: ");
-        Scanner scanner = new Scanner(System.in);
+    
         int choice = scanner.nextInt();
-        switch (choice) {
+        switch (choice) { // To-Do: Make this a for loop
             case 1:
                 System.out.println("You selected Manage Members");
                 //Need to create separate class to be called here
@@ -30,6 +33,7 @@ public class main {
                 break;
             case 3:
                 System.out.println("You selected Manage Drones");
+                droneManager.menu();
                 //Need to create separate class to be called here
                 break;
             case 4:
