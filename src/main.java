@@ -47,11 +47,13 @@ public class main {
                     break;
                 case 6:
                     System.out.println("You selected Rentals");
-                    //Need to create a separate class to be called here
+                    Rentals rental = new Rentals();
+                    rental.menu();
                     break;
                 case 7:
                     System.out.println("You selected Returns");
-                    //Need to create a separate class to be called here
+                    Returns returns = new Returns();
+                    returns.menu();
                     break;
                 case 8:
                     System.out.println("You selected Ratings & Reviews");
