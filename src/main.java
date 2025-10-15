@@ -5,6 +5,7 @@ public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         DroneManager droneManager = new DroneManager();
+        CustomerManager customerManager = new CustomerManager();
 
         //This will act as the main menu for the database system
         System.out.println("Welcome to the Database System for Group 10");
@@ -25,6 +26,7 @@ public class main {
         switch (choice) { // To-Do: Make this a for loop
             case 1:
                 System.out.println("You selected Manage Members");
+                customerManager.menu();
                 //Need to create separate class to be called here
                 break;
             case 2:
