@@ -1,25 +1,50 @@
 import java.util.Scanner;
 
-
 public class Rentals {
-    public void menu() {
-        Scanner scanner = new Scanner(System.in);
-        int choice = 0;
+    private final Scanner scanner;
 
-        System.out.println("--- Rentals ---");
-        while (choice != 3) {
-            System.out.println("1. Delivery");
-            System.out.println("2. Pickup");
-            System.out.println("3. Return to Main Menu");
-            choice = scanner.nextInt();
+    public Rentals(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
-            switch (choice) {
-                case 1 -> System.out.println("You selected Delivery");
-                case 2 -> System.out.println("You selected Pickup");
-                case 3 -> System.out.println("Returning to main menu...");
-            }
-        }
-        
-        scanner.close();
+    public void handleRentEquipment() {
+        System.out.println("\n--- Rent Equipment ---");
+        String userId = prompt("Customer User ID: ");
+        String equipmentSerial = prompt("Equipment Serial Number: ");
+        String checkoutDate = prompt("Checkout Date (YYYY-MM-DD): ");
+        String dueDate = prompt("Due Date (YYYY-MM-DD): ");
+        String notes = prompt("Any special instructions: ");
+
+        System.out.printf("Rental recorded for user %s, equipment %s from %s to %s. Notes: %s%n",
+                userId, equipmentSerial, checkoutDate, dueDate, notes.isEmpty() ? "None" : notes);
+    }
+
+    public void scheduleDelivery() {
+        System.out.println("\n--- Schedule Delivery ---");
+        String userId = prompt("Customer User ID: ");
+        String equipmentSerial = prompt("Equipment Serial Number: ");
+        String droneSerial = prompt("Assign Drone Serial Number: ");
+        String deliveryDate = prompt("Delivery Date (YYYY-MM-DD): ");
+        String window = prompt("Preferred delivery window (e.g., 10AM-12PM): ");
+
+        System.out.printf("Delivery scheduled. Drone %s will deliver equipment %s to user %s on %s during %s.%n",
+                droneSerial, equipmentSerial, userId, deliveryDate, window);
+    }
+
+    public void schedulePickup() {
+        System.out.println("\n--- Schedule Pickup ---");
+        String userId = prompt("Customer User ID: ");
+        String equipmentSerial = prompt("Equipment Serial Number: ");
+        String droneSerial = prompt("Assign Drone Serial Number for pickup: ");
+        String pickupDate = prompt("Pickup Date (YYYY-MM-DD): ");
+        String window = prompt("Preferred pickup window: ");
+
+        System.out.printf("Pickup scheduled. Drone %s will pick up equipment %s from user %s on %s during %s.%n",
+                droneSerial, equipmentSerial, userId, pickupDate, window);
+    }
+
+    private String prompt(String label) {
+        System.out.print(label);
+        return scanner.nextLine().trim();
     }
 }

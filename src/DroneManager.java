@@ -3,7 +3,11 @@ import java.util.Scanner;
 
 public class DroneManager {
     private ArrayList<Drone> drones = new ArrayList<>();
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner;
+
+    public DroneManager(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     public void menu() {
         int choice;

@@ -1,16 +1,18 @@
 public class Customer {
-    private String userId;
+    private final int userId;
     private String firstName;
     private String lastName;
     private String address;
     private String phone;
     private String email;
-    private String startDate;         // keep as String for CP2 simplicity
+    private String startDate;         // store as ISO text for now
     private double warehouseDistance; // numeric distance
+    private String nearestWarehouse;
 
-    public Customer(String userId, String firstName, String lastName,
+    public Customer(int userId, String firstName, String lastName,
                     String address, String phone, String email,
-                    String startDate, double warehouseDistance) {
+                    String startDate, double warehouseDistance,
+                    String nearestWarehouse) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -19,10 +21,11 @@ public class Customer {
         this.email = email;
         this.startDate = startDate;
         this.warehouseDistance = warehouseDistance;
+        this.nearestWarehouse = nearestWarehouse;
     }
 
     // getters
-    public String getUserId() { return userId; }
+    public int getUserId() { return userId; }
     public String getFirstName() { return firstName; }
     public String getLastName() { return lastName; }
     public String getAddress() { return address; }
@@ -30,6 +33,7 @@ public class Customer {
     public String getEmail() { return email; }
     public String getStartDate() { return startDate; }
     public double getWarehouseDistance() { return warehouseDistance; }
+    public String getNearestWarehouse() { return nearestWarehouse; }
 
     // setters
     public void setFirstName(String firstName) { this.firstName = firstName; }
@@ -39,12 +43,13 @@ public class Customer {
     public void setEmail(String email) { this.email = email; }
     public void setStartDate(String startDate) { this.startDate = startDate; }
     public void setWarehouseDistance(double warehouseDistance) { this.warehouseDistance = warehouseDistance; }
+    public void setNearestWarehouse(String nearestWarehouse) { this.nearestWarehouse = nearestWarehouse; }
 
     @Override
     public String toString() {
         return String.format(
-            "UserID: %s | Name: %s %s | Address: %s | Phone: %s | Email: %s | Start: %s | Warehouse Dist: %.2f",
-            userId, firstName, lastName, address, phone, email, startDate, warehouseDistance
+            "UserID: %d | Name: %s %s | Address: %s | Phone: %s | Email: %s | Start: %s | Warehouse Dist: %.2f | Nearest Warehouse: %s",
+            userId, firstName, lastName, address, phone, email, startDate, warehouseDistance, nearestWarehouse
         );
     }
 }
