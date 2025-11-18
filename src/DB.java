@@ -6,6 +6,15 @@ import java.sql.SQLException;
 
 
 public final class DB {
+    
+    // Load the SQLite JDBC driver explicitly
+    static {
+        try {
+            Class.forName("org.sqlite.JDBC");
+        } catch (ClassNotFoundException e) {
+            System.err.println("Failed to load SQLite JDBC driver: " + e.getMessage());
+        }
+    }
   
     private static final String DATABASE = "data/database_binary.db";
 	
