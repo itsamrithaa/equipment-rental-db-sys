@@ -39,12 +39,15 @@ README.md
   - `Returns.java`  
 
 
-### 4. Run the Program (VS Code)
+### 4. Command Line Compile and Run
+1. Open terminal inside VS Code and paste the following into command line. One by one. 
 
-1. Open `src/DB.java`  
-2. Click the **Run** button above the `main()` method  
-OR  
-Right-click → **Run Java**
+```bash
+# compile
+javac -cp 'lib/*:src' -d bin src/*.java 
+# run
+java -cp 'bin:lib/*' DB 
+```
 
 The program will compile and run automatically.
 
@@ -57,7 +60,6 @@ You should see the following message:
 `Welcome to the Database System for Group 10`
 
 This confirms successful import.
-
 
 ## Repository Layout 
 

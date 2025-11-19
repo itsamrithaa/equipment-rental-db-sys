@@ -88,7 +88,17 @@ public class main {
 
     private static int readMenuChoice(Scanner scanner) {
         while (true) {
+            if (!scanner.hasNextLine()) {
+                System.out.println("\nNo input detected. Exiting...");
+                return 11; // treat EOF as request to exit
+            }
+
             String input = scanner.nextLine().trim();
+            if (input.isEmpty()) {
+                System.out.print("Please enter a valid number: ");
+                continue;
+            }
+
             try {
                 return Integer.parseInt(input);
             } catch (NumberFormatException e) {
