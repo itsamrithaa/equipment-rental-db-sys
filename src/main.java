@@ -12,6 +12,8 @@ public class main {
         Rentals rentals = new Rentals(scanner);
         Returns returns = new Returns(scanner);
         ReportService reportService = new ReportService(conn, scanner);
+        ReviewService reviewService = new ReviewService(conn, scanner);
+        Transactions transactions = new Transactions(conn, scanner);
 
         boolean stay = true;
         System.out.println("Welcome to the Database System for Group 10");
@@ -27,7 +29,9 @@ public class main {
             System.out.println("8. Delivery of Equipment");
             System.out.println("9. Pickup of Equipment");
             System.out.println("10. Useful Reports");
-            System.out.println("11. Exit");
+            System.out.println("11. View Review");
+            System.out.println("12. View Transactions");
+            System.out.println("13. Exit");
             System.out.print("Please enter your choice: ");
 
             int choice = readMenuChoice(scanner);
@@ -73,6 +77,14 @@ public class main {
                     reportService.menu();
                     break;
                 case 11:
+                    System.out.println("You selected View Review");
+                    reviewService.menu();
+                    break;
+                case 12:
+                    System.out.println("You selected View Transactions");
+                    transactions.menu();
+                    break;
+                case 13:
                     System.out.println("You selected Exit");
                     stay = false;
                     break;
