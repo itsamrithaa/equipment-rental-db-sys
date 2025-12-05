@@ -9,8 +9,8 @@ public class main {
         Scanner scanner = new Scanner(System.in);
         DroneManager droneManager = new DroneManager(scanner);
         CustomerManager customerManager = new CustomerManager(conn, scanner);
-        Rentals rentals = new Rentals(scanner);
-        Returns returns = new Returns(scanner);
+        Rentals rentals = new Rentals(conn, scanner);
+        Returns returns = new Returns(conn, scanner);
         ReportService reportService = new ReportService(conn, scanner);
         ReviewService reviewService = new ReviewService(conn, scanner);
         Transactions transactions = new Transactions(conn, scanner);
