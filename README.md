@@ -12,7 +12,7 @@ A Java console application for managing customers, drones, rentals, and returns,
 ## Instructions for Graders
 
 ### **1. Unzip the submission**
-- Download the ZIP file (e.g., `databases-group10.zip`).
+- Download the ZIP file (e.g., `equipemt-rental-db-sys.zip`).
 - Extract it. You should now something like:
 
 ```md
@@ -27,7 +27,7 @@ README.md
 ### **2. Open the project in VS Code**
 1. Launch VS Code  
 2. Go to **File → Open Folder…**  
-3. Select the extracted project folder (e.g., `databases-group10`)  
+3. Select the extracted project folder (e.g., `equipment-rental-db-sys`)  
 4. Press **Open**
 
 ### 3. Command Line Compile and Run
