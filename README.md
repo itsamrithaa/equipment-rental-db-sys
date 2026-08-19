@@ -1,4 +1,4 @@
-# Database Management Project: Group 10  
+# Equipment Rental Database System  
 A Java console application for managing customers, drones, rentals, and returns, integrated with an SQLite database.
 
 
